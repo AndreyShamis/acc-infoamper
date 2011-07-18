@@ -151,12 +151,18 @@ H4 {
 .th-line {
     float:left;
     width:100%;
+    background:#eee;
     border:1px solid #ccc;
 }
 .tr-line {
     float:left;
     width:100%;
-    border:1px solid #ccc;   
+    border:1px solid #ccc;
+}
+.th-line DIV, .tr-line DIV {
+    float:left;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
 }
 
 /*____________________________________________________________________________*/
