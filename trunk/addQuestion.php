@@ -24,6 +24,8 @@ elseif(count($checks) > 1)
     $data['correct_answer'] = 0;
 else
     $err.= 'No Answer. Please try again<br />';
+
+
 /*____________________________________________________________________________*/
 //  проверяем данные в массиве ссылок
 $urls = array(
@@ -61,7 +63,11 @@ if(!strlen($question_code) < 1001)
 if(count($answers) > 1)
 {
     foreach($answers as $key => $val)
-        if(filter_var()) $data['answer_'. $key] = $val;
+    {
+        echo $val .'<br />';
+        if(filter_var($val, FILTER_VALIDATE_BOOLEAN)) $data['answer_'. $key] = $val;
+
+    }
 } else {
     $err.= '2 answers minimum required.<br />';
 }
@@ -91,6 +97,15 @@ if(!$err)
             <textarea cols='50' rows='6' id='question_code' name='question_code'><code>...</code></textarea>
         </td>
       </tr>
+      <tr>
+        <td style='width:50%;text-align:right;'>
+            Description of right answer to this query :
+        </td>
+        <td style='width:50%;text-align:left;'>
+            <input type="text" name="quiz_desc" value=""/>
+        </td>
+      </tr>
+
       <?php
       for($i=1;$i<8;$i++)
       {
@@ -107,14 +122,7 @@ if(!$err)
       <?php
       }
       ?>
-      <tr>
-        <td style='width:50%;text-align:right;'>
-            Description of right answer to this query :
-        </td>
-        <td style='width:50%;text-align:left;'>
-            <input type="text" name="quiz_desc" value=""/>
-        </td>
-      </tr>
+
       <tr>
       <td colspan='2'>
       <?php
@@ -130,6 +138,7 @@ if(!$err)
       ?>
       </td>
       </tr>
+
       <tr>
         <td colspan="2"><input type="submit" value="Add" /></td>
       </tr>

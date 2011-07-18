@@ -23,7 +23,7 @@ include "serv_db_simple_connect.php";
 		$f = mysql_fetch_array($q);
 ?>
     <span><?=$f["tag_name"]?>
-	<input type="checkbox" name="subj[]" /></span>
+	<input type="checkbox" name="subj[<?=$f["tag_name"]?>]" /></span>
 <?php
     }
 ?>

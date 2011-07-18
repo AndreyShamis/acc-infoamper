@@ -214,3 +214,59 @@
 [18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
 [18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
 [18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 13:19:49] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/serv_db_simple_connect.php on line 7
+[18-Jul-2011 13:19:58] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/serv_db_simple_connect.php on line 7
+[18-Jul-2011 13:25:50] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/serv_db_simple_connect.php on line 7
+[18-Jul-2011 13:25:55] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 25
+[18-Jul-2011 13:33:51] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 25
+[18-Jul-2011 13:39:52] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/serv_db_simple_connect.php on line 7
+[18-Jul-2011 13:39:52] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home2/infoampe/public_html/acc.infoamper.com/serv_db_simple_connect.php on line 7
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:07] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:40:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:41:17] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:34] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:43:43] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:23] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 67
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
+[18-Jul-2011 13:44:53] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 68
