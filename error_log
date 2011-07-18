@@ -1,0 +1,136 @@
+[17-Jul-2011 14:40:13] PHP Parse error:  syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 36
+[17-Jul-2011 16:31:00] PHP Parse error:  syntax error, unexpected ';' in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 14
+[17-Jul-2011 16:34:14] PHP Fatal error:  Class 'clsBuildExam' not found in /home2/infoampe/public_html/acc.infoamper.com/index.php on line 5
+[17-Jul-2011 16:34:29] PHP Fatal error:  Access to undeclared static property: clsdb::$HN in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 23
+[17-Jul-2011 16:35:31] PHP Fatal error:  Access to undeclared static property: clsdb::$UN in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 24
+[17-Jul-2011 16:37:45] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 38
+[17-Jul-2011 16:38:08] PHP Fatal error:  Class 'clsdb' not found in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 2
+[17-Jul-2011 16:38:09] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 38
+[17-Jul-2011 16:38:29] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:38:29] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:38:29] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:38:48] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:38:48] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:38:48] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:38:51] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:38:51] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:38:51] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:39:30] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:39:30] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:39:30] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:39:56] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'infoampe_acc'@'localhost' (using password: YES) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:39:56] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:39:56] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:41:19] PHP Fatal error:  Constructor clsdb::__construct() cannot be static in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 68
+[17-Jul-2011 16:41:22] PHP Fatal error:  Constructor clsdb::__construct() cannot be static in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 68
+[17-Jul-2011 16:41:33] PHP Fatal error:  Class 'clsdb' not found in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 2
+[17-Jul-2011 16:41:36] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'infoampe_acc'@'localhost' (using password: YES) in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:41:36] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:41:36] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:42:09] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:42:09] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:42:09] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:42:25] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:42:25] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:42:25] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:45:58] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:45:58] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 32
+[17-Jul-2011 16:45:58] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:46:44] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:46:44] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 16:46:44] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 41
+[17-Jul-2011 16:47:39] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:47:39] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 16:47:39] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 42
+[17-Jul-2011 16:47:39] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 43
+[17-Jul-2011 16:47:39] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:48:05] PHP Fatal error:  Non-static method mysqli::connect() cannot be called statically in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:48:20] PHP Fatal error:  Call to undefined method clsdb::mysqli_connect() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:48:32] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:48:32] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 16:48:32] PHP Fatal error:  Non-static method mysqli::query() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 42
+[17-Jul-2011 16:49:05] PHP Fatal error:  Non-static method mysqli::connect() cannot be called statically in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:49:21] PHP Fatal error:  Non-static method mysqli::connect() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:49:25] PHP Fatal error:  Non-static method mysqli::connect() cannot be called statically, assuming $this from incompatible context in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:49:49] PHP Fatal error:  Class 'clsdb' not found in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 2
+[17-Jul-2011 16:49:53] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'infoampe_acc'@'localhost' to database 'infoampe_acc' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 31
+[17-Jul-2011 16:49:53] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 16:49:53] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 42
+[17-Jul-2011 16:49:53] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 43
+[17-Jul-2011 16:49:53] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:50:43] PHP Warning:  mysql_query(): supplied argument is not a valid MySQL-Link resource in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 42
+[17-Jul-2011 16:50:43] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:51:20] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:51:23] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:52:03] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:52:11] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:54:03] PHP Fatal error:  Call to undefined function  connect() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 16:54:25] PHP Fatal error:  Call to undefined method clsBuildExam::fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 16:55:31] PHP Fatal error:  Call to undefined function  mysql_fetchall_assoc() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 16:56:53] PHP Fatal error:  Call to undefined function  mysql_fetch_all_assoc() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 16:56:55] PHP Fatal error:  Call to undefined function  mysql_fetch_all_assoc() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 16:57:02] PHP Fatal error:  Call to undefined function  mysql_fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 16:57:05] PHP Fatal error:  Call to undefined function  mysql_fetch_all() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 16:57:33] PHP Warning:  Wrong parameter count for mysql_fetch_array() in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 16:57:55] PHP Warning:  mysql_fetch_array(): supplied resource is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 51
+[17-Jul-2011 17:03:42] PHP Parse error:  syntax error, unexpected T_STRING in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 56
+[17-Jul-2011 17:04:02] PHP Warning:  mysql_fetch_array(): supplied resource is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 47
+[17-Jul-2011 17:07:56] PHP Warning:  mysql_fetch_array(): supplied resource is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 48
+[17-Jul-2011 17:13:56] PHP Fatal error:  Call to undefined function  mysql_num_row() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 17:14:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 17:15:01] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 7
+[17-Jul-2011 17:15:01] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 7
+[17-Jul-2011 17:15:01] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 17:21:27] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 7
+[17-Jul-2011 17:21:27] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 7
+[17-Jul-2011 17:21:27] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 17:22:14] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'infoampe'@'localhost' (using password: NO) in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 7
+[17-Jul-2011 17:22:14] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 7
+[17-Jul-2011 17:22:14] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 8
+[17-Jul-2011 17:26:20] PHP Parse error:  syntax error, unexpected '}' in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 22
+[17-Jul-2011 17:26:51] PHP Fatal error:  Cannot access private property clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 27
+[17-Jul-2011 17:27:26] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 27
+[17-Jul-2011 17:27:31] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 27
+[17-Jul-2011 17:27:36] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:27:36] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:48] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:48] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:52] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:52] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:55] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:55] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:56] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:56] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:57] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:57] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:58] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:29:58] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home2/infoampe/public_html/acc.infoamper.com/BuildExam.php on line 8
+[17-Jul-2011 17:40:10] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 29
+[17-Jul-2011 17:40:45] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 29
+[17-Jul-2011 17:41:06] PHP Parse error:  syntax error, unexpected T_RETURN in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 29
+[17-Jul-2011 17:41:11] PHP Parse error:  syntax error, unexpected T_RETURN in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 29
+[17-Jul-2011 18:00:07] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:00:09] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:00:17] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:00:18] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:00:40] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:01:19] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:01:21] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:01:23] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:01:44] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:01:46] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:02:00] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:02:02] PHP Parse error:  syntax error, unexpected T_ECHO in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 10
+[17-Jul-2011 18:49:07] PHP Parse error:  syntax error, unexpected '=' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 18:49:17] PHP Parse error:  syntax error, unexpected '=' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 18:49:30] PHP Parse error:  syntax error, unexpected '=' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 33
+[17-Jul-2011 19:02:47] PHP Fatal error:  Undefined class constant 'dblink' in /home2/infoampe/public_html/acc.infoamper.com/clsBuildExam.php on line 7
+[17-Jul-2011 19:07:16] PHP Fatal error:  Undefined class constant 'dblink' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 40
+[17-Jul-2011 19:30:34] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 41
+[17-Jul-2011 19:33:10] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 34
+[17-Jul-2011 19:33:26] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 34
+[17-Jul-2011 19:33:31] PHP Fatal error:  Access to undeclared static property: clsdb::$dblink in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 34
+[18-Jul-2011 04:07:57] PHP Fatal error:  Call to private clsdb::__construct() from invalid context in /home2/infoampe/public_html/acc.infoamper.com/index.php on line 5
+[18-Jul-2011 04:08:42] PHP Fatal error:  Call to undefined method clsdb::OpenAllDB() in /home2/infoampe/public_html/acc.infoamper.com/list_questions.php on line 6
+[18-Jul-2011 04:09:11] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 48
+[18-Jul-2011 04:16:31] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 49

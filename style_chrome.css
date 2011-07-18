@@ -1,0 +1,165 @@
+HTML, BODY {
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+A.current {
+    margin-bottom: 15px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px crimson;
+    -webkit-transition-duration: 1s;
+       -moz-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+}
+A:link {
+	color: #336699;
+}
+A:visited {
+	color: #003366;
+}
+A:hover {
+	background: #3399CC;
+	color: white;
+}
+
+P {
+    padding-top : 5px;
+    padding-bottom : 5px;
+}
+
+UL {
+    list-style : none;
+    margin-left : 0;
+    padding-left : 0;
+    margin-top : 0;
+    position: relative;
+    z-index: 10
+}
+
+IMG {
+    border : none;
+    padding-top : 0px;
+    padding-bottom : 0px;
+}
+
+PRE {
+    font-size: 1.2em !important;
+    font-family : "Courier New", Courier, mono;
+}
+EM {
+    font-style: oblique;
+
+}
+
+H1 {
+    font-size : 1.6em;
+    line-height : 1em;
+    display : block;
+    margin-bottom : 0.2em;
+    /*border-top: 1px solid silver;*/
+    padding: 15px 0 3px 0;
+}
+H1 A:link, H1 A:visited {
+    text-decoration: none !important
+}
+H1 a:hover {
+    color: white !important
+}
+H2 {
+    font-size: 1.4em;
+    margin: 10px 0 5px 0;
+}
+H3 {
+    font-size: 1.3em;
+    margin: 10px 0 5px;
+    font-weight: bold
+}
+H4 {
+    font-size: 1.2em;
+    margin: 8px 0 1px 0
+}
+/*____________________________________________________________________________*/
+#page {
+
+}
+    #header {
+        float:left;
+        width:100%;
+    }
+        #header-top {
+            float:left;
+            width:15%;
+            height:30px;
+        }
+        #header-mid {
+            float:left;
+            width:70%;
+            height:100px;
+        }
+            #header-mid-left {
+                float:left;
+                width:20%;
+                height:100px;
+            }
+            #header-mid-center {
+                float:left;
+                width:60%;
+                height:100px;
+            }
+            #header-mid-right {
+                float:left;
+                width:20%;
+                height:100px;
+            }
+        #header-sub {
+            float:left;
+            width:15%;
+            height:30px;
+        }
+    #content {
+        float:left;
+        width:100%;
+    }
+        #content-left {
+            float:left;
+            width:20%;
+        }
+        #content-right {
+            float:left;
+            width:80%;
+        }
+    #footer {
+        float:left;
+        width:100%;
+    }
+        #footer-left {
+            float:left;
+            width:20%;
+        }
+        #footer-center {
+            float:left;
+            width:60%;
+        }
+        #footer-right {
+            float:left;
+            width:20%;
+        }
+
+/*____________________________________________________________________________*/
+
+
+
+.tag
+{
+    border:solid 1px #111111;
+    background-color:#e2e1a1;
+    text-align: center;
+    -webkit-box-shadow: 4px 4px 4px #888;
+    -moz-border-radius: 6px;
+       -moz-box-shadow: 4px 4px 4px #888;
+     border-radius: 18px;
+    box-shadow: 4px 4px 4px #888;
+    font-size: 28px;
+}
