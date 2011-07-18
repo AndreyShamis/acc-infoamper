@@ -196,3 +196,13 @@
 [18-Jul-2011 05:53:03] PHP Warning:  get_headers() [<a href='function.get-headers'>function.get-headers</a>]: This function may only be used against URLs. in /home2/infoampe/public_html/acc.infoamper.com/sitemap_builder.xml.php on line 103
 [18-Jul-2011 05:58:27] PHP Warning:  file_get_contents(www.acc.infoamper.com) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home2/infoampe/public_html/acc.infoamper.com/sitemap_builder.xml.php on line 172
 [18-Jul-2011 05:58:27] PHP Warning:  get_headers() [<a href='function.get-headers'>function.get-headers</a>]: This function may only be used against URLs. in /home2/infoampe/public_html/acc.infoamper.com/sitemap_builder.xml.php on line 105
+[18-Jul-2011 06:37:05] PHP Parse error:  syntax error, unexpected '.' in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 150
+[18-Jul-2011 06:39:45] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 150
+[18-Jul-2011 06:39:56] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home2/infoampe/public_html/acc.infoamper.com/clsdb.php on line 150
+[18-Jul-2011 06:56:53] PHP Warning:  Invalid argument supplied for foreach() in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 8
+[18-Jul-2011 06:57:32] PHP Warning:  Invalid argument supplied for foreach() in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 8
+[18-Jul-2011 06:57:35] PHP Warning:  Invalid argument supplied for foreach() in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 8
+[18-Jul-2011 07:20:58] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
+[18-Jul-2011 07:22:48] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
+[18-Jul-2011 07:22:52] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
+[18-Jul-2011 07:33:46] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
