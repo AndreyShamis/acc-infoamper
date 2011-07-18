@@ -1,8 +1,12 @@
 <?php
-	include "serv_db_tables_name.php" ;	//	ALL TABLES NAMES
-	include "clsdb.php";
+header("Cache-Control: no-cache, must-revalidate");
+header("Content-Type: text/html; charset=utf-8");
+
+include "serv_db_tables_name.php" ;	//	ALL TABLES NAMES
+include "clsdb.php";
 	
-	$db = new clsdb();
+$db = new clsdb();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,15 +16,13 @@
     <!--[if IE]>
     	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if IE 7]>
-    	<link rel="stylesheet" href="templ1/ie7.css" type="text/css" media="screen" />
-    <![endif]-->
-    <link rel="stylesheet" href="templ1/style.css" type="text/css" media="screen" />
-    <link rel='stylesheet' id='cfq-css'  href='style_chrome.css' type='text/css' media='all' />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery.anchor.js" type="text/javascript"></script>
-    <script src="js/jquery.fancybox-1.2.6.pack.js" type="text/javascript"></script>
-<? include "google_analytics.inc.php";?> 
+    <script src="js/user_agent_loader.js" type="text/javascript"></script>
+
+    <link rel='stylesheet' href='css/styles.css'    type='text/css' />
+    <link rel='stylesheet' href=''                  type='text/css' id='browser_version' />
+
+    <? include "google_analytics.inc.php";?>
 </head>
 
 <body>
