@@ -4,24 +4,17 @@ HTML, BODY {
     text-align:center;
 }
 
-A.current {
+A {
+    color: #0638E3;
     margin-bottom: 15px;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px crimson;
+    text-shadow: 1px 1px 1px black;
     -webkit-transition-duration: 1s;
        -moz-transition-duration: 1s;
          -o-transition-duration: 1s;
             transition-duration: 1s;
 }
-A:link {
-	color: #336699;
-}
-A:visited {
-	color: #003366;
-}
 A:hover {
-	background: #3399CC;
-	color: white;
+	color: #34DB22;
 }
 
 P {
@@ -80,11 +73,10 @@ H4 {
     font-size: 1.2em;
     margin: 8px 0 1px 0
 }
-.menu {
-            width: 100%;
-			text-align: center;
-        }
 /*____________________________________________________________________________*/
+#page {
+    float:left;
+}
     #header {
         float:left;
         width:100%;
@@ -95,7 +87,7 @@ H4 {
             height:30px;
         }
         #header-mid {
-            float:left;  
+            float:left;
             min-width:70%;
             height:100px;
         }
@@ -106,27 +98,36 @@ H4 {
             }
             #header-mid-center {
                 float:left;
+                min-width:60%;
+                height:100px;
             }
             #header-mid-right {
                 float:left;
                 min-width:20%;
                 height:100px;
             }
-        
+        #header-sub {
+            float:left;
+            min-width:100%;
+            height:50px;
+            font: 10pt "Arial Black";
+        }
     #content {
         float:left;
         width:100%;
     }
         #content-left {
             float:left;
-            width: 20%;
+            min-width:20%;
         }
         #content-right {
-            float:right;
+            float:left;
+            min-width:80%;
         }
     #footer {
         float:left;
         width:100%;
+        padding:8px 0 8px 0;
     }
         #footer-left {
             float:left;

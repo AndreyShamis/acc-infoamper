@@ -206,3 +206,11 @@
 [18-Jul-2011 07:22:48] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
 [18-Jul-2011 07:22:52] PHP Parse error:  syntax error, unexpected ')' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
 [18-Jul-2011 07:33:46] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 17
+[18-Jul-2011 07:55:24] PHP Parse error:  syntax error, unexpected '}' in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 54
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
+[18-Jul-2011 09:48:55] PHP Warning:  filter_var() expects at least 1 parameter, 0 given in /home2/infoampe/public_html/acc.infoamper.com/addQuestion.php on line 64
