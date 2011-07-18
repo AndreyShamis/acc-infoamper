@@ -118,6 +118,43 @@ class clsdb
     }
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
 //
+    public function dbAddQuestion(&$question, &$question_code, &$answers, &$checks)
+    {
+        //  if no database connection then connect.
+        if(!self::$dblink) self::connect();
+        //  return sql query result.
+        if(!$this->res = mysql_query("INSERT INTO `tblacc_data` (
+            correct_answer,
+            answer_1,
+            answer_2,
+            answer_3,
+            answer_4,
+            answer_5,
+            answer_6,
+            answer_7,
+            var_1,
+            var_2,
+            var_3,
+            var_4,
+            var_5,
+            var_6,
+            var_7,
+            subject_name,
+            url_1,
+            url_2,
+            url_3,
+            quiz_question,
+            quiz_answer,
+            dt
+        ) VALUES(
+            ". implode("'\", \"'", array_map('mysql_escape_string', array_keys($values))) ."
+        )"))
+            return mysql_errno() ."|". mysql_error() ."|". $query;
+        else
+            return (TRUE);
+    }
+/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+//
     public function num_rows() {if(mysql_num_rows($this->res)) return mysql_num_rows($this->res);}
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
 //
