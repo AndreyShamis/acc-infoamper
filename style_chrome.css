@@ -82,7 +82,7 @@ H4 {
 }
 /*____________________________________________________________________________*/
 #page {
-
+    float:left;
 }
     #header {
         float:left;
@@ -90,33 +90,33 @@ H4 {
     }
         #header-top {
             float:left;
-            width:15%;
+            min-width:15%;
             height:30px;
         }
         #header-mid {
             float:left;
-            width:70%;
+            min-width:70%;
             height:100px;
         }
             #header-mid-left {
                 float:left;
-                width:20%;
+                min-width:20%;
                 height:100px;
             }
             #header-mid-center {
                 float:left;
-                width:60%;
+                min-width:60%;
                 height:100px;
             }
             #header-mid-right {
                 float:left;
-                width:20%;
+                min-width:20%;
                 height:100px;
             }
         #header-sub {
             float:left;
-            width:15%;
-            height:30px;
+            min-width:15%;
+            height:50px;
         }
     #content {
         float:left;
@@ -124,11 +124,11 @@ H4 {
     }
         #content-left {
             float:left;
-            width:20%;
+            min-width:20%;
         }
         #content-right {
             float:left;
-            width:80%;
+            min-width:80%;
         }
     #footer {
         float:left;
@@ -136,16 +136,28 @@ H4 {
     }
         #footer-left {
             float:left;
-            width:20%;
+            min-width:20%;
         }
         #footer-center {
             float:left;
-            width:60%;
+            min-width:60%;
         }
         #footer-right {
             float:left;
-            width:20%;
+            min-width:20%;
         }
+
+/*____________________________________________________________________________*/
+.th-line {
+    float:left;
+    width:100%;
+    border:1px solid #ccc;
+}
+.tr-line {
+    float:left;
+    width:100%;
+    border:1px solid #ccc;   
+}
 
 /*____________________________________________________________________________*/
 

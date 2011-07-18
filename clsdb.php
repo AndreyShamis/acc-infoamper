@@ -48,12 +48,40 @@ class clsdb
     {
         $tbl = "
             <div class='th-line'>
-                <div></div>
+                <div style=\"float:left;width:100%;\">Subject</div>
+
+                <div style=\"float:left;width:1%;\"></div>
+                <div style=\"float:left;width:79%;\"></div>
+                <div style=\"float:left;width:20%;\"></div>
+
+                <div style=\"float:left;width:100%;\"></div>
+
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+                <div style=\"float:left;width:50%;\"></div>
+
+                <div style=\"float:left;width:33%;\"></div>
+                <div style=\"float:left;width:34%;\"></div>
+                <div style=\"float:left;width:33%;\"></div>
+
+                <div style=\"float:left;width:50%;\"></div>
             </div>
         ";
+
         while($row = mysql_fetch_assoc($this->res))
         {
-            $tbl.= "<div>
+            $tbl.= "<div class='tr-line'>
                     <div style=\"float:left;width:100%;\">". htmlspecialchars($row['subject_name'], ENT_NOQUOTES, "UTF-8") ."</div>
 
                     <div style=\"float:left;width:1%;\">". htmlspecialchars($row['id'], ENT_NOQUOTES, "UTF-8") ."</div>
