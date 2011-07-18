@@ -1,4 +1,5 @@
 <?php
+	include "serv_db_tables_name.php" ;	//	ALL TABLES NAMES
 	include "clsdb.php";
 	
 	$db = new clsdb();
@@ -37,11 +38,11 @@
                 </div>
                 <div id='header-mid-right'>&nbsp;</div>
             </div>
-
-        </div>
-            <div class='menu'>
+            <div id='header-sub'>
                 <?php include_once("main_links_menu.php");?>
             </div>
+        </div>
+
         <!-- CONTENT -->
         <div id='content'>
             <div id='content-left'>
@@ -94,16 +95,23 @@
     </div>
     <!-- FOOTER -->
     <div id='footer'>
-        <div id='footer-left'>&nbsp;</div>
+        <div id='footer-left'>
+            &nbsp;
+        </div>
         <div id='footer-center'>
-            Alexey & Andrey<br />
-            <strong><a href="http://www.acc.infoamper.com">ACC</a></strong><br />
-            <a href="About_php_sertification.php">About PHP Sertification</a>
-        </div>  <br />
-		<div  id='footer-center'>
-		<a href="http://www.infoamper.com">http://www.infoamper.com</a> || 
-		<a href="http://www.armade.net">http://www.armade.net</a></div>
-        <div id='footer-right'>&nbsp;</div>
+            <strong><a href="http://www.acc.infoamper.com">ACC - Automated Certification Coach</a></strong><br />
+            <div style='float:left;width:50%;'>
+              <a href="mailto:lolnik@gmail.com">lolnik</a><br />
+              <a href="http://www.infoamper.com">http://www.infoamper.com</a>
+            </div>
+            <div style='float:left;width:50%;'>
+              <a href="mailto:qpayct@gmail.com">qpayct</a><br />
+              <a href="http://www.armade.net">http://www.armade.net</a>
+            </div>
+        </div>
+        <div id='footer-right'>
+            &nbsp;
+        </div>
     </div>
 
 </body>
