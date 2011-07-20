@@ -10,32 +10,29 @@ BODY {
     font-family: Keffeesatz, Arial;
     color: #4b4b4b;
     background: url(../img/pattern.gif);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 A {
     color: #0638E3;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 1px black;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #0638E3;
+    text-shadow: 1px 1px 1px #bbb;
     -webkit-transition-duration: 1s;
        -moz-transition-duration: 1s;
          -o-transition-duration: 1s;
             transition-duration: 1s;
 }
 A:hover {
-	color: #34DB22;
+	color: #7ac000;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #7ac000;
 }
-H1 {
-    color: #fff;
-    font-size: 40px;
-    position: relative;
-    top: 15px;
-}
+
 H1 A {
     color: #fff;
     font-size: 40px;
     background-color: #ff5400;
-    padding: 5px 25px 10px 25px;
-    width: 300px;
+    padding: 5px 5px 10px 5px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
@@ -58,8 +55,7 @@ H1 A {
 
 H1 A:hover {
     color: #fff;
-    border-bottom:
-    1px solid rgba(0, 0, 0, 0.4);
+    border-bottom:	1px solid rgba(0, 0, 0, 0.4);
     padding-bottom: 10px;
     background-color: #7ac000;
 	background: -webkit-gradient(
@@ -76,16 +72,24 @@ H1 A:hover {
 	);
 }
 H1 {
+    top: 15px;
+    display : block;
+    position: relative;
+    color: #fff;
     font-size : 1.6em;
     line-height : 1em;
-    display : block;
     margin-bottom : 0.2em;
     /*border-top: 1px solid silver;*/
     padding: 15px 0 3px 0;
 }
 H2 {
     font-size: 1.4em;
-    margin: 10px 0 5px 0;
+    margin: 2px 0 5px 0;
+}
+H2 span.sub {
+    font-size: 48px;
+    float: left;
+    color: #4b4b4b;
 }
 H3 {
     font-size: 1.3em;
@@ -94,52 +98,7 @@ H3 {
 }
 H4 {
     font-size: 1.2em;
-    margin: 8px 0 1px 0
-}
-H2 {
-    font-size: 66px;
-    color: #ff5400;
-    height: 50px;
-}
-H2 span.sub {
-    font-size: 48px;
-    float: left;
-    color: #4b4b4b;
-}
-
-H2.intro {
-    background: url(../img/intro.png) no-repeat -10px -10px;
-}
-H2.work {
-    background: url(../img/portfolio.png) no-repeat -10px -10px;
-}
-H2.contact {
-    background: url(../img/contact.png) no-repeat -10px -10px;
-}
-
-A {
-    color: #7ac000;
-    text-decoration: none;
-    border-bottom: 1px solid #7ac000;
-    padding-bottom: 2px;
-}
-A:hover {
-    color: #ff5400;
-    text-decoration: none;
-    border-bottom: 1px solid #ff5400;
-    padding-bottom: 2px;
-}
-A:active {
-    color: #ff5400;
-    text-decoration: none;
-    border-bottom: 1px solid #ff5400;
-    padding-bottom: 2px;
-    position: relative;
-    top: 1px;
-}
-
-strong {
-    font-family: KeffeesatzBold, Arial;
+    margin: 2px 0 1px 0
 }
 
 P {
@@ -152,66 +111,68 @@ P {
 
 UL {
     list-style : none;
-    margin-left : 0;
-    padding-left : 0;
-    margin-top : 0;
     position: relative;
-    z-index: 10
+    z-index: 10;
 }
 
 IMG {
     border : none;
-    padding-top : 0px;
-    padding-bottom : 0px;
 }
 
 PRE {
-    font-size: 1.2em !important;
     font-family : "Courier New", Courier, mono;
 }
 EM {
     font-style: oblique;
-
 }
 
-input[type="text"] {
-    width: 400px;
+TEXTAREA {
+    width: 99%;
+    height: 120px;
 }
-textarea {
-    width: 750px;
-    height: 275px;
-}
-label {
-    color: #ff5400;
-}
-input, textarea {
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 5px solid rgba(122, 192, 0, 0.15);
-    padding: 10px; font-family: Keffeesatz, Arial;
+INPUT, TEXTAREA {
     color: #4b4b4b;
-    font-size: 24px;
-    -webkit-border-radius: 5px;
-    margin-bottom: 15px;
-    margin-top: -10px;
+    font-size: 18px;
+    margin: -2px 0 2px 0;
+    -webkit-border-radius: 2px;
+    border: 2px solid rgba(122, 192, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.4);
 }
-input:focus, textarea:focus {
-    border: 5px solid #ff5400;
+INPUT:focus, TEXTAREA:focus {
+    border: 2px solid #ff5400;
     background-color: rgba(255, 255, 255, 1);
 }
-
-input[type="submit"] {
-    border: none;
+INPUT[type="text"] {
+    width: 350px;
+}
+INPUT[type="submit"] {
+    border:none;
     cursor: pointer;
     color: #fff;
-    font-size: 24px;
-    background-color: #7ac000;
+    font-size: 18px;
+    background-color: #FF5400;
     padding: 5px 36px 8px 36px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
+	background: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.23, #c34000),
+	    color-stop(0.62, #FF5400)
+	);
+	background: -moz-linear-gradient(
+	    center bottom,
+	    #c34000 23%,
+	    #FF5400 62%
+	);
+}
+INPUT[type="submit"]:hover {
+    color: #fff;
+    border:none;
+    background-color: #7ac000;
 	background: -webkit-gradient(
 	    linear,
 	    left bottom,
@@ -225,32 +186,23 @@ input[type="submit"] {
 	    #7ac000 62%
 	);
 }
-
-input[type="submit"]:hover {
-    color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    background-color: #ff5400;
-	background: -webkit-gradient(
-	    linear,
-	    left bottom,
-	    left top,
-	    color-stop(0.23, #c34000),
-	    color-stop(0.62, #ff5400)
-	);
-	background: -moz-linear-gradient(
-	    center bottom,
-	    #c34000 23%,
-	    #ff5400 62%
-	);
-}
-
-input[type="submit"]:active {
+INPUT[type="submit"]:active {
     position: relative;
     top: 1px;
 }
+::selection {
+    background-color: rgba(122, 192, 0, 0.2);
+}
+::-moz-selection {
+    background-color: rgba(122, 192, 0, 0.2);
+    border: 2px solid red;
+}
+
 /*____________________________________________________________________________*/
 #page {
+	width:100%;
     float:left;
+    padding:8px 0 8px 0;
 }
     #header {
         float:left;
@@ -258,28 +210,24 @@ input[type="submit"]:active {
     }
         #header-top {
             float:left;
-            min-width:15%;
-            height:30px;
+            min-width:100%;
         }
         #header-mid {
             float:left;
-            min-width:70%;
-            height:100px;
+            min-width:100%;
+			height: 100px;
         }
             #header-mid-left {
                 float:left;
-                min-width:20%;
-                height:100px;
+                min-width:10%;
             }
             #header-mid-center {
                 float:left;
-                min-width:60%;
-                height:100px;
+                min-width:80%;
             }
             #header-mid-right {
                 float:left;
-                min-width:20%;
-                height:100px;
+                min-width:10%;
             }
         #header-sub {
             float:left;
@@ -289,15 +237,21 @@ input[type="submit"]:active {
         }
     #content {
         float:left;
-        width:100%;
+		width:100%;
+        max-width:1000px;
+		
     }
         #content-left {
             float:left;
-            min-width:20%;
+            min-width:10%;
+        }
+        #content-ceneter {
+            float:left;
+            min-width:80%;
         }
         #content-right {
             float:left;
-            min-width:80%;
+            min-width:10%;
         }
     #footer {
         float:left;
@@ -354,21 +308,46 @@ input[type="submit"]:active {
 
 
 
-::selection { background-color: rgba(122, 192, 0, 0.2); }
-::-moz-selection { background-color: rgba(122, 192, 0, 0.2); border: 10px solid red; }
 
-#headercontainer, #contentcontainer { width: 960px; margin: 0 auto; position: relative; }
-#contentcontainer { float: none; padding-top: 0px; }
+#intro H2 A {
+    padding-bottom: 0px;
+}
+#intro A.featured {
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+#intro A IMG {
+    border: 2px solid rgba(122, 192, 0, 0.15);
+    -webkit-border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+#intro A IMG:hover, #portfolio .work A IMG:hover, INPUT:hover, TEXTAREA:hover {
+    border: 2px solid rgba(122, 192, 0, 1);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+#intro A IMG:active, #portfolio .work A IMG:active {
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-#intro h2 a { padding-bottom: 0px; }
-#intro a.featured { padding-bottom: 0px; border-bottom: none; }
-#intro a img { border: 5px solid rgba(122, 192, 0, 0.15); -webkit-border-radius: 5px; margin-top: 40px; margin-bottom: 5px; }
-#intro a img:hover, #portfolio .work a img:hover, input:hover, textarea:hover { border: 5px solid rgba(122, 192, 0, 1); -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); }
-#intro a img:active, #portfolio .work a img:active { -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
-
-#portfolio ul.work a { border-bottom: none; }
-#portfolio ul.work a img { border: 5px solid rgba(122, 192, 0, 0.15); -webkit-border-radius: 5px; }
-#portfolio ul.work { float: left; margin-left: -15px; width: 975px;  }
-#portfolio ul.work li { list-style: none; float: left; margin-left: 15px; margin-bottom: 15px; }
-
-#contact { margin-bottom: 0px; }
+#portfolio UL.work A {
+    border-bottom: none;
+}
+#portfolio UL.work A IMG {
+    border: 2px solid rgba(122, 192, 0, 0.15);
+    -webkit-border-radius: 5px;
+}
+#portfolio UL.work {
+    float: left;
+    margin-left: -15px;
+    width: 975px;
+}
+#portfolio UL.work LI {
+    list-style: none;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+#contact {
+    margin-bottom: 0px;
+}
