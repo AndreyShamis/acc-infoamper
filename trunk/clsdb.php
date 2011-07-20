@@ -29,13 +29,14 @@ class clsdb
         mysql_set_charset('utf8', self::$dblink);
         mysql_query("set character_set_client='utf8'");
         mysql_query("set character_set_results='utf8'");
-        mysql_query("set collation_connection='utf8_general_ci'");
+        //mysql_query("set collation_connection='utf8_general_ci'");
     }
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
     public function execute($query)
     {
         //  if no database connection then connect.
-        if(!self::$dblink) self::connect();
+        if(!self::$dblink)
+			self::connect();
         //  return sql query result.
         if(!$this->res = mysql_query($query))
             return mysql_errno() ."|". mysql_error() ."|". $query;
@@ -48,10 +49,10 @@ class clsdb
     {
         $tbl = "
             <div class='th-line'>
-                <div style=\"width:1%;\">ID</div>
-                <div style=\"width:10%;\">Subject</div>
+                <div style=\"width:5%;\">ID</div>
+                <div style=\"width:5%;\">Subject</div>
                 <div style=\"width:80%;\">Question</div>
-                <div style=\"width:8%;\">Date</div>
+                <div style=\"width:9%;\">Date</div>
 
             </div>
         ";
@@ -60,10 +61,10 @@ class clsdb
         {
             if(empty($row)) $row = '&nbsp;';
             $tbl.= "<div class='tr-line'>
-                    <div style=\"width:1%;\">". htmlspecialchars($row['id'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    <div style=\"width:10%;\">". htmlspecialchars($row['subject_name'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    <div style=\"width:80%;\">". htmlspecialchars($row['quiz_question'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    <div style=\"width:8%;\">". htmlspecialchars($row['dt'], ENT_NOQUOTES, "UTF-8") ."</div>
+                    <div style=\"width:5%;\">&nbsp;". htmlspecialchars($row['id'], ENT_NOQUOTES, "UTF-8") ."</div>
+                    <div style=\"width:5%;\">&nbsp;". htmlspecialchars($row['subject_name'], ENT_NOQUOTES, "UTF-8") ."</div>
+                    <div style=\"width:80%;text-align:left;\">&nbsp;". htmlspecialchars($row['quiz_question'], ENT_NOQUOTES, "UTF-8") ."</div>
+                    <div style=\"width:9%;\">&nbsp;". htmlspecialchars($row['dt'], ENT_NOQUOTES, "UTF-8") ."</div>
 
                     <div style=\"display:none;\">
                         <div style=\"width:5%;\">Correct Answer</div>
@@ -118,40 +119,27 @@ class clsdb
     }
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
 //
-    public function dbAddQuestion(&$question, &$question_code, &$answers, &$checks)
+    public function dbAddQuestion(&$values)
     {
+        //echo '<pre>';print_r($_POST);echo '</pre>';
         //  if no database connection then connect.
-        if(!self::$dblink) self::connect();
-        //  return sql query result.
-        if(!$this->res = mysql_query("INSERT INTO `tblacc_data` (
-            correct_answer,
-            answer_1,
-            answer_2,
-            answer_3,
-            answer_4,
-            answer_5,
-            answer_6,
-            answer_7,
-            var_1,
-            var_2,
-            var_3,
-            var_4,
-            var_5,
-            var_6,
-            var_7,
-            subject_name,
-            url_1,
-            url_2,
-            url_3,
-            quiz_question,
-            quiz_answer,
-            dt
-        ) VALUES(
-            ". implode("'\", \"'", array_map('mysql_escape_string', array_keys($values))) ."
-        )"))
-            return mysql_errno() ."|". mysql_error() ."|". $query;
-        else
-            return (TRUE);
+        if(!self::$dblink)
+		  	self::connect();
+		$sql = "INSERT INTO `tblacc_data` SET ";
+		$input_size = count($values);
+		$counter=0;
+
+		foreach($values as $key=>$val)
+		{
+			$counter++;
+			$sql.= " " . $key . "='" . mysql_real_escape_string($val) . "' ";
+			if($counter < $input_size)
+				$sql .= ",";
+		}
+		mysql_query($sql);
+
+		if(mysql_errno())
+			echo mysql_errno() ."|". mysql_error() ."|". $sql;
     }
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
 //

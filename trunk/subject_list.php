@@ -13,7 +13,7 @@ include "serv_db_simple_connect.php";
     {
 		$f = mysql_fetch_array($q);
 ?>
-    <span class="tag"><a href="<?=$f["id"]?>"><?=$f["tag_name"]?> </a></span>
+    <span class="tag"><a href="?pg=question-list&amp;subject=<?=$f["id"]?>&amp;subject_name=<?=urlencode($f["tag_name"])?>"><?=$f["tag_name"]?> </a></span>
 <?php
     }
 ?>
