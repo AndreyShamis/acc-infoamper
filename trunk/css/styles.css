@@ -15,98 +15,16 @@ A {
     color: #0638E3;
     margin-bottom: 5px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #0638E3;
-    text-shadow: 1px 1px 1px #bbb;
+    text-shadow: 2px 2px 1px #bbb;
+    text-decoration:none;
     -webkit-transition-duration: 1s;
        -moz-transition-duration: 1s;
          -o-transition-duration: 1s;
             transition-duration: 1s;
 }
 A:hover {
-	color: #7ac000;
+	color: gold;
     padding-bottom: 2px;
-    border-bottom: 1px solid #7ac000;
-}
-
-H1 A {
-    color: #fff;
-    font-size: 40px;
-    background-color: #ff5400;
-    padding: 5px 5px 10px 5px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-	background: -webkit-gradient(
-	    linear,
-	    left bottom,
-	    left top,
-	    color-stop(0.23, #c34000),
-	    color-stop(0.62, #ff5400)
-	);
-	background: -moz-linear-gradient(
-	    center bottom,
-	    #c34000 23%,
-	    #ff5400 62%
-	);
-}
-
-H1 A:hover {
-    color: #fff;
-    border-bottom:	1px solid rgba(0, 0, 0, 0.4);
-    padding-bottom: 10px;
-    background-color: #7ac000;
-	background: -webkit-gradient(
-	    linear,
-	    left bottom,
-	    left top,
-	    color-stop(0.23, #619702),
-	    color-stop(0.62, #7ac000)
-	);
-	background: -moz-linear-gradient(
-	    center bottom,
-	    #619702 23%,
-	    #7ac000 62%
-	);
-}
-H1 {
-    top: 15px;
-    display : block;
-    position: relative;
-    color: #fff;
-    font-size : 1.6em;
-    line-height : 1em;
-    margin-bottom : 0.2em;
-    /*border-top: 1px solid silver;*/
-    padding: 15px 0 3px 0;
-}
-H2 {
-    font-size: 1.4em;
-    margin: 2px 0 5px 0;
-}
-H2 span.sub {
-    font-size: 48px;
-    float: left;
-    color: #4b4b4b;
-}
-H3 {
-    font-size: 1.3em;
-    margin: 10px 0 5px;
-    font-weight: bold
-}
-H4 {
-    font-size: 1.2em;
-    margin: 2px 0 1px 0
-}
-
-P {
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 15px;
-    padding-top : 5px;
-    padding-bottom : 5px;
 }
 
 UL {
@@ -116,7 +34,7 @@ UL {
 }
 
 IMG {
-    border : none;
+    border:none;
 }
 
 PRE {
@@ -195,7 +113,6 @@ INPUT[type="submit"]:active {
 }
 ::-moz-selection {
     background-color: rgba(122, 192, 0, 0.2);
-    border: 2px solid red;
 }
 
 /*____________________________________________________________________________*/
@@ -210,48 +127,131 @@ INPUT[type="submit"]:active {
     }
         #header-top {
             float:left;
-            min-width:100%;
+            width:100%;
         }
         #header-mid {
             float:left;
-            min-width:100%;
-			height: 100px;
+            width:100%;
         }
             #header-mid-left {
                 float:left;
-                min-width:10%;
+                width:20%;
             }
+
             #header-mid-center {
                 float:left;
-                min-width:80%;
+                width:60%;
+                text-shadow:2px 2px 2px #000;
             }
+                .logo {
+                    font: 22pt "Arial Black";
+                    text-shadow:5px 5px 4px #fff;
+                    -webkit-transition-duration: 1s;
+                       -moz-transition-duration: 1s;
+                         -o-transition-duration: 1s;
+                            transition-duration: 1s;
+                }
+                .logo:hover {
+                    color:crimson;
+                    text-shadow:5px 5px 4px #000;
+                }
+
             #header-mid-right {
                 float:left;
-                min-width:10%;
+                width:20%;
             }
         #header-sub {
             float:left;
             min-width:100%;
-            height:50px;
-            font: 10pt "Arial Black";
+            padding-top:15px;
         }
+
     #content {
         float:left;
 		width:100%;
-        max-width:1000px;
-		
+
     }
         #content-left {
             float:left;
-            min-width:10%;
+            min-width:1%;
+            max-width:15%;
         }
-        #content-ceneter {
+        #content-center {
             float:left;
-            min-width:80%;
+            min-width:70%;
+            max-width:100%;
         }
+            #menu {
+                float:left;
+                width:100%;
+            }
+                DIV.vkladka-left {
+                    float:left;
+                }
+                DIV.vkladka-right {
+                    float:right;
+                }
+
+                DIV.vkladka-left, DIV.vkladka-right, DIV.vkladka-selected {
+                    border:1px ridge #ddd;
+                    padding:6px 8px 0px 8px;
+                    background: -webkit-gradient(
+                	    linear,
+                	    left top,
+                        left bottom,
+                	    color-stop(0.15, #D7E1E1),
+                	    color-stop(0.65, #F2F4F4)
+                	);
+                	background: -moz-linear-gradient(
+                        top center,
+                	    #D7E1E1 15%,
+                	    #F2F4F4 65%
+                	);
+                    -webkit-border-radius: 20px 20px 0px 0px;
+                       -moz-border-radius: 20px 20px 0px 0px;
+                }
+                DIV.vkladka-selected {
+                    float:left;
+                    text-decoration:underline;
+                    border-bottom:1px ridge #F2F4F4;
+                }
+                DIV.vkladka-left A, DIV.vkladka-right A, DIV.vkladka-selected A {
+                    font: 14pt Miriam;
+                }
+                DIV.vkladka-left A:hover, DIV.vkladka-right A:hover {
+                    text-shadow:2px 2px 2px #000;
+                }
+            #menu-content {
+                float:left;
+                width:100%;
+                padding:0 0 0 12px;
+                border:1px ridge #ccc;
+                border-top:none;
+                font: 12pt "Courier";
+                background: -webkit-gradient(
+                	    linear,
+                        left bottom,
+                	    left top,
+                	    color-stop(0.15, #D7E1E1),
+                	    color-stop(0.65, #F2F4F4)
+                	);
+            	background: -moz-linear-gradient(
+                    bottom center,
+            	    #D7E1E1 15%,
+            	    #F2F4F4 65%
+            	);
+                -webkit-border-radius: 0px 0px 20px 20px;
+                   -moz-border-radius: 0px 0px 20px 20px;
+            }
+                .nav-panel {
+                    float:left;
+                    width:100%;
+                }
+
         #content-right {
             float:left;
-            min-width:10%;
+            min-width:1%;
+            max-width:15%;
         }
     #footer {
         float:left;
@@ -273,21 +273,56 @@ INPUT[type="submit"]:active {
 
 /*____________________________________________________________________________*/
 .th-line {
+    color:#fff;
+    font:12pt "Arial Black";
+}
+    .urlki A {
+        padding:2px 10px 2px 10px;
+    }
+
+.tr-line1 DIV {
+    background:#E0E8EB;
+    padding:0;
+}
+.tr-line2 DIV {
+    background:#E8EEF0;
+    padding:0;
+}
+.tr-line1 DIV:HOVER, .tr-line2 DIV:HOVER {
+    background:#efefef;
+}
+.th-line DIV, .tr-line1 DIV, .tr-line2 DIV {
     float:left;
-    width:100%;
-    background:#eee;
+	width:99%;
+}
+
+
+.navi {
+    float:left;
+    width:898px;
+    margin-top:2px;
+    margin-bottom:2px;
+    font-size:8pt;
+    text-align:center;
+}
+.tblPanel {
+    border:solid 1px #000;
+}
+.tblPanel-non {
     border:1px solid #ccc;
 }
-.tr-line {
+.tblPanel, .tblPanel-non {
     float:left;
-    width:100%;
-    border:1px solid #ccc;
+    width:20px;
+    margin-right:2px;
+    padding-top:3px;
 }
-.th-line DIV, .tr-line DIV {
-    float:left;
-    border-right: solid 1px #ccc;
-    border-bottom: solid 1px #ccc;
+.tblPanel:hover {
+    cursor:pointer;
+    color:blue;
+    background:#f5f5f5;
 }
+
 
 /*____________________________________________________________________________*/
 
@@ -306,7 +341,17 @@ INPUT[type="submit"]:active {
     font-size: 28px;
 }
 
-
+.show_object {
+	float:left;
+	width:99%;
+	display:block;
+    border:ridge 3px #ccc;
+}
+.hide_object {
+	float:left;
+	width:99%;
+	display:none;
+}
 
 
 #intro H2 A {
