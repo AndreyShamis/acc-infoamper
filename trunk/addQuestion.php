@@ -44,7 +44,7 @@ if($canAddPost)
 	{
 	    foreach($checks as $key => $val)
 	    {
-	        $data['var_'. intval($key)] = $val;
+	        $data['var_'. intval($key)] =1;
 	    }
 	}
 	else
@@ -90,7 +90,7 @@ else
 	if($err == '')
 	{
 	    $db->dbAddQuestion($data);
-		$data="";
+		//$data="";
 	}
 }
 /*____________________________________________________________________________*/
@@ -107,7 +107,7 @@ else
 <?php
 	}
 ?>
-<form action="?pg=addQuestion"  method="post" style="border: 4px solid #aaa;background-color:#ccc;">
+<form action="?pg=addQuestion"  method="post">
 <input type="hidden" name="addPost" value="<?=rand(1,100)?>" />
    <table style="width: 100%;">
       <tr>

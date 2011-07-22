@@ -1,8 +1,14 @@
 <?php
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
-/*                  DATABASE CONNECTION CLASS .......>>>>>>>>>>>>>>>
-                                                by qpayct 28.07.2010          */
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
+/*
+
+
+
+                        DATABASE CONNECTION CLASS
+                                                by qpayct 28.07.2010
+
+                                                                              */
+/*____________________________________________________________________________*/
 class clsdb
 {
     static protected $DB = "infoampe_acc";      //  database.
@@ -14,12 +20,12 @@ class clsdb
     protected $res;                             //  sql resource.
     protected $ip;                              //  sql resource.
 
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
     public function __construct()
     {
         $this->ip = self::getRealIpAddr();
     }
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
     private static function connect()
     {   // DB connection.
         self::$dblink = mysql_connect(self::$HN, self::$UN, self::$PW);
@@ -31,7 +37,7 @@ class clsdb
         mysql_query("set character_set_results='utf8'");
         //mysql_query("set collation_connection='utf8_general_ci'");
     }
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
     public function execute($query)
     {
         //  if no database connection then connect.
@@ -43,81 +49,168 @@ class clsdb
         else
             return (TRUE);
     }
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
 //
-    public function dbOpenAssoc()
+    public function fetchall_row()
     {
-        $tbl = "
-            <div class='th-line'>
-                <div style=\"width:5%;\">ID</div>
-                <div style=\"width:5%;\">Subject</div>
-                <div style=\"width:80%;\">Question</div>
-                <div style=\"width:9%;\">Date</div>
+        $retval = array();
+        while($row = mysql_fetch_row($this->res))
+        {
+            if($row!=' ')
+            {
+                $func = create_function('$row', 'return htmlspecialchars($row, ENT_QUOTES , "UTF-8");');
+                $retval[] = array_map($func, $row);
+            }
+        }
+        return $retval;
+    }
+/*____________________________________________________________________________*/
+//
+    public function fetchall_assoc()
+    {
+        $retval = array();
+        while($row = mysql_fetch_assoc($this->res))
+        {
+            if($row!=' ')
+            {
+                $func = create_function('$row', 'return htmlspecialchars($row, ENT_QUOTES , "UTF-8");');
+                $retval[] = array_map($func, $row);
+            }
+        }
+        return $retval;
+    }
+//=============================================================================
+//
+    public function dbBuildList($query)
+    {
+        $this->execute($query);
+		$templ = new ClassTemplate("templates/acc","ListQuestion.php");
+		$urlTpl = new ClassTemplate("templates/acc","ListQuestionUrl.php");
+		$AnswerTpl = new ClassTemplate("templates/acc","ListQuestionAnswer.php");
 
+        $co = $this->num_rows();
+        $row = $this->fetchall_assoc();
+		for($i=0; $i<$co; $i++)
+		{
+            if($i%2==0) $col = 'tr-line1';
+            else        $col = 'tr-line2';
+
+			$row[$i]['col'] = $col;
+            for($k=1;$k<4;$k++)
+			{
+				if(!empty($row[$i]['url_'.$k]))
+                {
+                	$link[1] = $row[$i]['url_'.$k];
+					$urlTpl->set($link);
+				}
+				else
+				{
+					$urls_count = $k;
+					break;
+                }
+				unset($row[$i]["url_".$j]);
+			}
+			$ans = NULL;
+			for($j=1;$j<8;$j++)
+			{
+				if($row[$i]["answer_".$j])
+				{
+					$ans['answer'] = htmlspecialchars($row[$i]["answer_".$j], ENT_NOQUOTES, "UTF-8");
+					$ans['var'] = (int)$row[$i]["var_".$j];
+					$AnswerTpl->set($ans);
+				}
+				else
+				{
+					$answers_count = $j;
+					break;
+				}
+				unset($row[$i]["answer_".$j]);
+				unset($row[$i]["var_".$j]);
+			}
+
+			$row[$i]['urls'] = $urlTpl->getTemplate();
+			$row[$i]['answers'] = $AnswerTpl->getTemplate();
+			$templ->set($row[$i]);
+		}
+		$templ->_debug();
+		return($templ->getTemplate());
+
+    }
+/*____________________________________________________________________________*/
+//
+    public function dbOpenAssoc($query, $nav)
+    {
+        //  описание генерируюегося листа
+        $tbl =  "<div style=\"width:100%:\">". $nav ."</div>
+            <div class='th-line'>
+    		    <div style=\"width:80%;font-size:14pt;background:#000;\">Question</div>
+    		    <div style=\"width:19%;font-size:14pt;background:#000;\">Subject</div>
             </div>
         ";
 
-        while($row = mysql_fetch_assoc($this->res))
+        $this->execute($query);
+        $co = $this->num_rows();
+        $row = $this->fetchall_assoc();
+        //echo $query .'<br />';
+        for($i=0; $i<$co; $i++)
         {
-            if(empty($row)) $row = '&nbsp;';
-            $tbl.= "<div class='tr-line'>
-                    <div style=\"width:5%;\">&nbsp;". htmlspecialchars($row['id'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    <div style=\"width:5%;\">&nbsp;". htmlspecialchars($row['subject_name'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    <div style=\"width:80%;text-align:left;\">&nbsp;". htmlspecialchars($row['quiz_question'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    <div style=\"width:9%;\">&nbsp;". htmlspecialchars($row['dt'], ENT_NOQUOTES, "UTF-8") ."</div>
+            if($i%2==0) $col = 'tr-line1';
+            else        $col = 'tr-line2';
+            //  листаем все записи таблицы вопросов
+            $answers_count = 0;
+            $urls_count = 0;
 
-                    <div style=\"display:none;\">
-                        <div style=\"width:5%;\">Correct Answer</div>
+            //  заполняем переменные данными из таблицы
+                                                    $quiz_answers   = htmlspecialchars($row[$i]['correct_answer'], ENT_NOQUOTES, "UTF-8");
+            if(!empty($row[$i]['quiz_question']))   $quiz_question  = htmlspecialchars($row[$i]['quiz_question'], ENT_NOQUOTES, "UTF-8");
+			if(!empty($row[$i]['quiz_answer']))     $quiz_answer    = htmlspecialchars($row[$i]['quiz_answer'], ENT_NOQUOTES, "UTF-8");
+			if(!empty($row[$i]['quiz_code']))       $quiz_code      = htmlspecialchars($row[$i]['quiz_code'], ENT_NOQUOTES, "UTF-8");
+			for($j=1;$j<8;$j++)
+			{
+				if(!empty($row[$i]["answer_".$j]))
+				{
+					$answers[$j] = htmlspecialchars($row[$i]["answer_".$j], ENT_NOQUOTES, "UTF-8");
+					$checks[$j] = htmlspecialchars($row[$i]["var_".$j], ENT_NOQUOTES, "UTF-8");
+					$anch[$j] = $answers[$j] . $checks[$j] . '<br />';
+				}
+				else
+				{
+					$answers_count = $j;
+					break;
+				}
+			}
+            $urlki='';
+            for($k=1;$k<4;$k++)
+			{
+				if(!empty($row[$i]['url_'.$k]))
+                {
+					$urls[$k] = htmlspecialchars($row[$i]['url_'.$k], ENT_NOQUOTES, "UTF-8");
+                    $urlki.= "<a href=\">". $urls[$k] ."\">". $urls[$k] ."</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				} else {
+					$urls_count = $k;
+					break;
+                }
+			}
 
-                        <div style=\"width:4%;\">Answer 1</div>
-                        <div style=\"width:1%;\">V</div>
-                        <div style=\"width:4%;\">Answer 2</div>
-                        <div style=\"width:1%;\">V</div>
-                        <div style=\"width:4%;\">Answer 3</div>
-                        <div style=\"width:1%;\">V</div>
-                        <div style=\"width:4%;\">Answer 4</div>
-                        <div style=\"width:1%;\">V</div>
-                        <div style=\"width:4%;\">Answer 5</div>
-                        <div style=\"width:1%;\">V</div>
-                        <div style=\"width:4%;\">Answer 6</div>
-                        <div style=\"width:1%;\">V</div>
-                        <div style=\"width:4%;\">Answer 7</div>
-                        <div style=\"width:1%;\">V</div>
+            //  строим таблицу
+            $tbl.= "<div class=\"". $col ."\" onclick=\"openHiddenPanel('hiddenPanel".(int)$row[$i]['id'] ."');\">
+				        <div style=\"width:80%;text-align:left;\">&nbsp;". htmlspecialchars($row[$i]['quiz_question'], ENT_NOQUOTES, "UTF-8") ."</div>
+				        <div style=\"width:19%;\">&nbsp;". htmlspecialchars($row[$i]['subject_name'], ENT_NOQUOTES, "UTF-8") ."</div>
+                        <div id=\"hiddenPanel".(int)$row[$i]['id'] ."\" class=\"hide_object\">
+				            <div style=\"float:left;width:60%;border-left:inset 1px #ccc;border-bottom:inset 1px #ccc;\">
+					            <div style=\"float:left;width:100%;\">&nbsp;". $quiz_question ."<br />".$quiz_code ."</div>
+					            <div style=\"float:left;width:100%;\">&nbsp;". $quiz_answer ."</div>
+				            </div>
+				            <div style=\"float:left;width:39%;border-left:inset 1px #ccc;border-bottom:inset 1px #ccc;\">&nbsp;". implode('<br />', $anch) ."</div>
+                            <div class=\"urlki\">&nbsp;". $urlki ."</div>
+                        </div>
+                    </div>";
 
-                        <div style=\"width:5%;\">URL 1</div>
-                        <div style=\"width:5%;\">URL 2</div>
-                        <div style=\"width:5%;\">URL 3</div>
-
-                        <div style=\"width:5%;\">Answer</div>
-
-                        <div style=\"width:5%;\">". htmlspecialchars($row['correct_answer'], ENT_NOQUOTES, "UTF-8") ."</div>
-
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_1'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_1'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_2'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_2'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_3'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_3'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_4'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_4'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_5'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_5'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_6'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_6'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:4%;\">". htmlspecialchars($row['answer_7'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:1%;\">". htmlspecialchars($row['var_7'], ENT_NOQUOTES, "UTF-8") ."</div>
-
-                        <div style=\"width:5%;\">". htmlspecialchars($row['url_1'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:5%;\">". htmlspecialchars($row['url_2'], ENT_NOQUOTES, "UTF-8") ."</div>
-                        <div style=\"width:5%;\">". htmlspecialchars($row['url_3'], ENT_NOQUOTES, "UTF-8") ."</div>
-
-                        <div style=\"width:5%;\">". htmlspecialchars($row['quiz_answer'], ENT_NOQUOTES, "UTF-8") ."</div>
-                    </div>
-            </div>";
         }
+        //return ("<div style=\"float:left;border:1px solid #ccc;\">". $tbl ."</div>");
         return ($tbl);
     }
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
 //
     public function dbAddQuestion(&$values)
     {
@@ -141,16 +234,16 @@ class clsdb
 		if(mysql_errno())
 			echo mysql_errno() ."|". mysql_error() ."|". $sql;
     }
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
 //
     public function num_rows() {if(mysql_num_rows($this->res)) return mysql_num_rows($this->res);}
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
 //
     public function free_results() {mysql_free_result($this->res);}
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
 //
     function sql_result() {if(mysql_result($this->res,1)) return mysql_result($this->res,1);}
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
 //
     private function getRealIpAddr() {
         if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"),"unknown")){$my_ip = getenv("HTTP_CLIENT_IP");}
@@ -160,6 +253,7 @@ class clsdb
         else {$my_ip = "unknown";}
         return($my_ip);
     }
-/* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_| */
+/*____________________________________________________________________________*/
+//
 }
 ?>
