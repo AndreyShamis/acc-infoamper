@@ -8,6 +8,26 @@
 
 
 */
+	$order 		= isset($_GET['order'])? (int)$_GET['order']:0;
+	$orderObj 	= isset($_GET['orderObj'])? (int)$_GET['orderObj']: NULL;
+
+	if($orderObj == "question")
+		$orderObj_str = " ORDER BY quiz_question ";
+	else if($orderObj == "subject")
+		$orderObj_str = " ORDER BY subject_name ";
+
+	if($order && $order != 1)
+		$order = 1;
+	if($orderObj_str)
+	{
+		if($order)
+			$order_str = " DESC ";
+		else
+			$order_str = " ASC ";
+	}
+
+	if($di > 50)
+		$di = 50;
 
 //  ОТКРЫВАЕМ ТАБЛИЦУ ВОПРОСОВ
     $db->execute("SELECT * FROM `tblacc_data` ");
@@ -42,8 +62,7 @@
     else                                            $of=$st+$di;            //  ИНАЧЕ
 
     //  ЗАДАЁМ КВЕРИ ДЛЯ ВЫВОДА ЗАПРОШЕНЫХ ЗАПИСЕЙ
-    $query = "SELECT * FROM `tblacc_data` ORDER BY subject_name ASC LIMIT ".$st .",". $of ." ";
-
+    $query = "SELECT * FROM `tblacc_data`". $orderObj_str. $order_str . " LIMIT ".$st .",". $di ." ";
 //  далее генерируем меню навигации с проверкой какие кнопки меню с какими ссылками и каскадными стилями классов вывести.
     // УСЛОВИЯ ОТОБРАЖЕНИЯ МЕНЮ НАВИГАЦИИ
     if($cl > 1) // если листов в списке больше одного
